@@ -9,13 +9,9 @@ services:
     restart: unless-stopped
     ports:
       - "3000:3000"
+    env_file:
+      - .env.local
     environment:
-      MONGODB_URI: mongodb+srv://admin:Smtp123!@ajaia-docs.aiuvcqc.mongodb.net/ajaia-docs?retryWrites=true&w=majority&appName=ajaia-docs
-      NEXTAUTH_SECRET: super-secret-key-for-dev-only-32chars
-      AUTH_SECRET: super-secret-key-for-dev-only-32chars
-      NEXTAUTH_URL: http://localhost:3000
-      AUTH_URL: http://localhost:3000
-      AUTH_TRUST_HOST: "true"
       NODE_ENV: production
       HOSTNAME: "0.0.0.0"
     command: sh -c "node_modules/.bin/tsx scripts/seed.ts && node server.js"

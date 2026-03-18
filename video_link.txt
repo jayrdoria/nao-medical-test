@@ -1,0 +1,9 @@
+Walkthrough Video URL:
+[PASTE YOUR LOOM OR YOUTUBE LINK HERE]
+
+Video covers:
+- Main user flow (login → create doc → edit → share → verify as another user)
+- File upload (.txt / .md drag & drop)
+- What was intentionally deprioritized and why
+- Key implementation decisions (Auth.js v5 edge split, Tiptap JSON, standalone Docker build)
+- How AI (Claude Code) supported the workflow
